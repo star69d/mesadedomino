@@ -1,2 +1,2 @@
-# mesa de dominó 
+dedicado a pepe y henry
 
