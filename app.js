@@ -1,5 +1,5 @@
 
-const VOICE_ENABLED_DEFAULT = false;
+const VOICE_ENABLED_DEFAULT = false; 
 const SOUND_ENABLED_DEFAULT = true;
 
 // clack sound
