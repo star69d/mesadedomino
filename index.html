@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mesa de dominó · v6.5 — zoom mainframe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud">
+      <div class="hud-left">
+        <span class="brand">starsixtynined // mesa de dominó</span>
+        <span class="round">round: <strong id="round-num">1</strong></span>
+        <span class="turn">turn: <strong id="turn-label">player</strong></span>
+      </div>
+      <div class="hud-right">
+        <button id="btn-pass" class="btn">pass</button>
+        <button id="btn-reset" class="btn btn-ghost">reset</button>
+        <button id="btn-toggle-sound" class="btn btn-ghost">sound: <span id="sound-state">on</span></button>
+        <button id="btn-toggle-voices" class="btn btn-ghost">voices: <span id="voices-state">off</span></button>
+      </div>
+    </header>
+
+    <main class="board">
+      <div class="playfield" id="playfield">
+        <div class="chain-area" id="chain-area">
+          <div class="chain-scale" id="chain-scale"></div>
+        </div>
+
+        <div class="zones">
+          <div class="dropzone" id="left-drop" data-end="left">◀ left</div>
+          <div class="dropzone" id="right-drop" data-end="right">right ▶</div>
+        </div>
+
+        <div class="seats">
+          <div class="seat top">cpu: node <span class="count">(<span id="cnt-top">7</span>)</span>
+            <div id="bubble-top" class="bubble"></div>
+          </div>
+          <div class="seat left">cpu: el viejo <span class="count">(<span id="cnt-left">7</span>)</span>
+            <div id="bubble-left" class="bubble"></div>
+          </div>
+          <div class="seat right">cpu: el viejo <span class="count">(<span id="cnt-right">7</span>)</span>
+            <div id="bubble-right" class="bubble"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="hand-wrap">
+      <div class="hand-title">tu mano — guevón
+        <span class="meta">hand:<strong id="hand-count">0</strong></span>
+      </div>
+      <div id="hand" class="hand"></div>
+      <div id="bubble-player" class="bubble bubble-player"></div>
+    </section>
+
+    <footer class="credit">
+      <div class="zoom-bar">
+        <button id="zoom-out" class="btn btn-ghost">- zoom</button>
+        <span id="zoom-label">100%</span>
+        <button id="zoom-in" class="btn btn-ghost">+ zoom</button>
+      </div>
+      ✴︎ node-0 + deformer6 : zoom mainframe ✴︎
+    </footer>
+
+    <div class="scanlines"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
